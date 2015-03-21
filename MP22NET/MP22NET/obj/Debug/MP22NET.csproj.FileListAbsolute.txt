@@ -19,3 +19,13 @@ C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\MP22NET_M
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\MP22NET.g.resources
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\MP22NET.exe
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\MP22NET.pdb
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Debug\MP22NET.exe.config
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Debug\EntityFramework.dll
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Debug\EntityFramework.xml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\MP22NET.Properties.Resources.resources
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\MP22NET.csproj.GenerateResource.Cache
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Debug\MP22NET.mdf
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Debug\MP22NET_log.ldf
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\MP22NET_Content.g.cs
