@@ -28,3 +28,16 @@ C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\MP22NET
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\MP22NET.pdb
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Release\MP22NET.exe
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Release\MP22NET.pdb
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\MP22NET.csprojResolveAssemblyReference.cache
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Administration.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\EditMapPage.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\ProductsPage.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\CategoriesPage.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\StatsPage.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Administration.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\EditMapPage.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\ProductsPage.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\CategoriesPage.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\StatsPage.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\EmployeesPage.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\EmployeesPage.g.cs

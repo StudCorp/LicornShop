@@ -29,3 +29,15 @@ C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\MP22NET.c
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Debug\MP22NET.mdf
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Debug\MP22NET_log.ldf
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\MP22NET_Content.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Administration.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\EditMapPage.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\ProductsPage.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\CategoriesPage.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\EmployeesPage.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\StatsPage.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Administration.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\EditMapPage.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\ProductsPage.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\CategoriesPage.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\EmployeesPage.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\StatsPage.g.cs

@@ -8,7 +8,7 @@
     <Grid>
         <ScrollViewer>
             <StackPanel x:Name="Panel" MinWidth="150">
-                <TextBlock Text="APPEARANCE" Style="{StaticResource Heading2}" Margin="0,0,0,8" />
+                <TextBlock Text="Apparence" Style="{StaticResource Heading2}" Margin="0,0,0,8" />
 
                 <ListBox ItemsSource="{Binding AccentColors}"
                          SelectedItem="{Binding SelectedAccentColor, Mode=TwoWay}"
@@ -31,7 +31,7 @@
 
                 <Grid HorizontalAlignment="Left">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" MinWidth="97.6" />
                         <ColumnDefinition MinWidth="120"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
@@ -39,11 +39,11 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Theme:" VerticalAlignment="Center" Margin="0,0,16,4" />
-                    <ComboBox Grid.Column="1" ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" DisplayMemberPath="DisplayName" VerticalAlignment="Center" Margin="0,0,0,4" />
+                    <TextBlock VerticalAlignment="Center" Margin="0,3,15.6,7.4" Height="16" ><Run Text="Th"/><Run Text="è"/><Run Text="me:"/></TextBlock>
+                    <ComboBox Grid.Column="1" ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" DisplayMemberPath="DisplayName" VerticalAlignment="Center" Margin="0.4,0,-0.4,4.4" Height="22" />
 
-                    <TextBlock Grid.Row="1" Text="Font size:" VerticalAlignment="Center" Margin="0,0,16,0" />
-                    <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding FontSizes}" SelectedItem="{Binding SelectedFontSize, Mode=TwoWay}" VerticalAlignment="Center" />
+                    <TextBlock Grid.Row="1" VerticalAlignment="Center" Margin="0,3.6,15.6,2.8" Height="16" ><Run Text="Taille de police"/><Run Text=":"/></TextBlock>
+                    <ComboBox Grid.Column="1" ItemsSource="{Binding FontSizes}" SelectedItem="{Binding SelectedFontSize, Mode=TwoWay}" VerticalAlignment="Center" Height="23" Margin="0.4,26,-0.4,-0.2" Grid.RowSpan="2" />
                 </Grid>
             </StackPanel>
         </ScrollViewer>

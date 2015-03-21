@@ -6,20 +6,26 @@
         ContentSource="/Pages/Home.xaml">
 
     <mui:ModernWindow.MenuLinkGroups>
-        <mui:LinkGroup DisplayName="welcome">
+        <mui:LinkGroup DisplayName="Accueil">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="home" Source="/Pages/Home.xaml" />
+                <mui:Link DisplayName="Carte du magasin" Source="/Pages/Home.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
-        <mui:LinkGroup DisplayName="settings" GroupKey="settings">
+        <mui:LinkGroup DisplayName="Administration" GroupKey="admin">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="software" Source="/Pages/SettingsPage.xaml" />
+                <mui:Link DisplayName="Administration du magasin" Source="/Pages/Administration.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Paramètres" GroupKey="settings">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Logiciel" Source="/Pages/SettingsPage.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
     </mui:ModernWindow.MenuLinkGroups>
     
     <mui:ModernWindow.TitleLinks>
-        <mui:Link DisplayName="settings" Source="/Pages/SettingsPage.xaml" />
-        <mui:Link DisplayName="help" Source="http://mui.codeplex.com" />
+        <mui:Link DisplayName="Accueil" Source="/Pages/Home.xaml" />
+        <mui:Link DisplayName="Administration" Source="/Pages/Administration.xaml" />
+        <mui:Link DisplayName="Paramètres" Source="/Pages/SettingsPage.xaml" />        
     </mui:ModernWindow.TitleLinks>
 </mui:ModernWindow>

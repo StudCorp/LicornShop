@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="MP22NET.Pages.Administration"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}">
+        <!-- TODO: set @SelectedSource -->
+        <mui:ModernTab Layout="List" SelectedSource="/Pages/Admin/ProductsPage.xaml">
+            <mui:ModernTab.Links>
+                <mui:Link DisplayName="Produits" Source="/Pages/Admin/ProductsPage.xaml"/>
+                <mui:Link DisplayName="Categories" Source="/Pages/Admin/CategoriesPage.xaml" />
+                <mui:Link DisplayName="Employés" Source="/Pages/Admin/EmployeesPage.xaml" />
+                <mui:Link DisplayName="Carte du Magasin" Source="/Pages/Admin/EditMapPage.xaml"/>
+                <mui:Link DisplayName="Statistiques" Source="/Pages/Admin/StatsPage.xaml"/>
+            </mui:ModernTab.Links>
+        </mui:ModernTab>
+    </Grid>
+</UserControl>

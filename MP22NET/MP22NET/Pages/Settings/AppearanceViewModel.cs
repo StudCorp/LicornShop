@@ -15,7 +15,7 @@ namespace MP22NET.Pages.Settings
     public class AppearanceViewModel
         : NotifyPropertyChanged
     {
-        private const string FontSmall = "small";
+        private const string FontSmall = "petite";
         private const string FontLarge = "large";
 
         // 9 accent colors from metro design principles
@@ -63,8 +63,8 @@ namespace MP22NET.Pages.Settings
         public AppearanceViewModel()
         {
             // add the default themes
-            this.themes.Add(new Link { DisplayName = "dark", Source = AppearanceManager.DarkThemeSource });
-            this.themes.Add(new Link { DisplayName = "light", Source = AppearanceManager.LightThemeSource });
+            this.themes.Add(new Link { DisplayName = "sombre", Source = AppearanceManager.DarkThemeSource });
+            this.themes.Add(new Link { DisplayName = "clair", Source = AppearanceManager.LightThemeSource });
 
             this.SelectedFontSize = AppearanceManager.Current.FontSize == FontSize.Large ? FontLarge : FontSmall;
             SyncThemeAndColor();
