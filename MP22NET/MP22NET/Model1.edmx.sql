@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/22/2015 04:35:28
+-- Date Created: 03/23/2015 00:27:30
 -- Generated from EDMX file: C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\Model1.edmx
 -- --------------------------------------------------
 
@@ -17,6 +17,18 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_CategoryProduct]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Products] DROP CONSTRAINT [FK_CategoryProduct];
+GO
+IF OBJECT_ID(N'[dbo].[FK_SectionProduct]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Products] DROP CONSTRAINT [FK_SectionProduct];
+GO
+IF OBJECT_ID(N'[dbo].[FK_EmployeeSection]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Sections] DROP CONSTRAINT [FK_EmployeeSection];
+GO
+IF OBJECT_ID(N'[dbo].[FK_CheckoutEmployee]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Checkouts] DROP CONSTRAINT [FK_CheckoutEmployee];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -30,6 +42,12 @@ IF OBJECT_ID(N'[dbo].[Categories]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Employees]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Employees];
+GO
+IF OBJECT_ID(N'[dbo].[Sections]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Sections];
+GO
+IF OBJECT_ID(N'[dbo].[Checkouts]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Checkouts];
 GO
 
 -- --------------------------------------------------
@@ -60,7 +78,7 @@ CREATE TABLE [dbo].[Employees] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Firstname] nvarchar(max)  NOT NULL,
     [Lastname] nvarchar(max)  NOT NULL,
-    [Icon] nvarchar(max)  NOT NULL
+    [Icon] nvarchar(max)  NULL
 );
 GO
 
@@ -69,6 +87,8 @@ CREATE TABLE [dbo].[Sections] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
     [Benefit] float  NOT NULL,
+    [s_left] int  NOT NULL,
+    [s_top] int  NOT NULL,
     [Employee_Id] int  NOT NULL
 );
 GO
@@ -79,6 +99,8 @@ CREATE TABLE [dbo].[Checkouts] (
     [Benefit] int  NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
     [Carts] int  NOT NULL,
+    [c_left] int  NOT NULL,
+    [c_top] int  NOT NULL,
     [Employee_Id] int  NOT NULL
 );
 GO

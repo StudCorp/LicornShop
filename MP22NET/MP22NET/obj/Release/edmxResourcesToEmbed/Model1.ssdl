@@ -3,17 +3,119 @@
   <EntityContainer Name="MP22NETModelStoreContainer">
     <EntitySet Name="Products" EntityType="MP22NETModel.Store.Products" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Categories" EntityType="MP22NETModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Employees" EntityType="MP22NETModel.Store.Employees" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sections" EntityType="MP22NETModel.Store.Sections" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Checkouts" EntityType="MP22NETModel.Store.Checkouts" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CategoryProduct" Association="MP22NETModel.Store.CategoryProduct">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="SectionProduct" Association="MP22NETModel.Store.SectionProduct">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="EmployeeSection" Association="MP22NETModel.Store.EmployeeSection">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Section" EntitySet="Sections" />
+    </AssociationSet>
+    <AssociationSet Name="CheckoutEmployee" Association="MP22NETModel.Store.CheckoutEmployee">
+      <End Role="Checkout" EntitySet="Checkouts" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Products">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" DefaultValue="0" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Category_Id" Type="int" Nullable="false" />
+    <Property Name="Section_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Categories">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Firstname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Lastname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Icon" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Sections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Benefit" Type="float" Nullable="false" />
+    <Property Name="Employee_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Checkouts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Benefit" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Carts" Type="int" Nullable="false" />
+    <Property Name="Employee_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="CategoryProduct">
+    <End Role="Category" Type="MP22NETModel.Store.Categories" Multiplicity="1" />
+    <End Role="Product" Type="MP22NETModel.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SectionProduct">
+    <End Role="Section" Type="MP22NETModel.Store.Sections" Multiplicity="1" />
+    <End Role="Product" Type="MP22NETModel.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Section_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EmployeeSection">
+    <End Role="Employee" Type="MP22NETModel.Store.Employees" Multiplicity="1" />
+    <End Role="Section" Type="MP22NETModel.Store.Sections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Section">
+        <PropertyRef Name="Employee_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CheckoutEmployee">
+    <End Role="Checkout" Type="MP22NETModel.Store.Checkouts" Multiplicity="*" />
+    <End Role="Employee" Type="MP22NETModel.Store.Employees" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Checkout">
+        <PropertyRef Name="Employee_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

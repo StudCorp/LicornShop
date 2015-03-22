@@ -22,6 +22,8 @@ namespace MP22NET
         public int Id { get; set; }
         public string Name { get; set; }
         public double Benefit { get; set; }
+        public int s_left { get; set; }
+        public int s_top { get; set; }
     
         public virtual ICollection<Product> Products { get; set; }
         public virtual Employee Employee { get; set; }

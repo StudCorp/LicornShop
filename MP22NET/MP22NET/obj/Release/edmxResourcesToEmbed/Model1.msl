@@ -5,6 +5,10 @@
       <EntityTypeMapping TypeName="IsTypeOf(MP22NETModel.Product)">
         <MappingFragment StoreEntitySet="Products">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -12,8 +16,70 @@
       <EntityTypeMapping TypeName="IsTypeOf(MP22NETModel.Category)">
         <MappingFragment StoreEntitySet="Categories">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="IsTypeOf(MP22NETModel.Employee)">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sections">
+      <EntityTypeMapping TypeName="IsTypeOf(MP22NETModel.Section)">
+        <MappingFragment StoreEntitySet="Sections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Benefit" ColumnName="Benefit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Checkouts">
+      <EntityTypeMapping TypeName="IsTypeOf(MP22NETModel.Checkout)">
+        <MappingFragment StoreEntitySet="Checkouts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Benefit" ColumnName="Benefit" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Carts" ColumnName="Carts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CategoryProduct" TypeName="MP22NETModel.CategoryProduct" StoreEntitySet="Products">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="Id" ColumnName="Category_Id" />
+      </EndProperty>
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SectionProduct" TypeName="MP22NETModel.SectionProduct" StoreEntitySet="Products">
+      <EndProperty Name="Section">
+        <ScalarProperty Name="Id" ColumnName="Section_Id" />
+      </EndProperty>
+      <EndProperty Name="Product">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EmployeeSection" TypeName="MP22NETModel.EmployeeSection" StoreEntitySet="Sections">
+      <EndProperty Name="Employee">
+        <ScalarProperty Name="Id" ColumnName="Employee_Id" />
+      </EndProperty>
+      <EndProperty Name="Section">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CheckoutEmployee" TypeName="MP22NETModel.CheckoutEmployee" StoreEntitySet="Checkouts">
+      <EndProperty Name="Employee">
+        <ScalarProperty Name="Id" ColumnName="Employee_Id" />
+      </EndProperty>
+      <EndProperty Name="Checkout">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

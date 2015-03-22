@@ -3,17 +3,95 @@
   <EntityContainer Name="MP22NETEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Products" EntityType="MP22NETModel.Product" />
     <EntitySet Name="Categories" EntityType="MP22NETModel.Category" />
+    <EntitySet Name="Employees" EntityType="MP22NETModel.Employee" />
+    <EntitySet Name="Sections" EntityType="MP22NETModel.Section" />
+    <AssociationSet Name="CategoryProduct" Association="MP22NETModel.CategoryProduct">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="SectionProduct" Association="MP22NETModel.SectionProduct">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="EmployeeSection" Association="MP22NETModel.EmployeeSection">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Section" EntitySet="Sections" />
+    </AssociationSet>
+    <EntitySet Name="Checkouts" EntityType="MP22NETModel.Checkout" />
+    <AssociationSet Name="CheckoutEmployee" Association="MP22NETModel.CheckoutEmployee">
+      <End Role="Checkout" EntitySet="Checkouts" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Product">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Category" Relationship="MP22NETModel.CategoryProduct" FromRole="Product" ToRole="Category" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Brand" Type="String" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" DefaultValue="0" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Section" Relationship="MP22NETModel.SectionProduct" FromRole="Product" ToRole="Section" />
   </EntityType>
   <EntityType Name="Category">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Products" Relationship="MP22NETModel.CategoryProduct" FromRole="Category" ToRole="Product" />
+    <Property Name="Name" Type="String" Nullable="false" />
   </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Sections" Relationship="MP22NETModel.EmployeeSection" FromRole="Employee" ToRole="Section" />
+    <NavigationProperty Name="Checkouts" Relationship="MP22NETModel.CheckoutEmployee" FromRole="Employee" ToRole="Checkout" />
+    <Property Name="Firstname" Type="String" Nullable="false" />
+    <Property Name="Lastname" Type="String" Nullable="false" />
+    <Property Name="Icon" Type="String" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Products" Relationship="MP22NETModel.SectionProduct" FromRole="Section" ToRole="Product" />
+    <NavigationProperty Name="Employee" Relationship="MP22NETModel.EmployeeSection" FromRole="Section" ToRole="Employee" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Benefit" Type="Double" Nullable="false" />
+    <Property Name="s_left" Type="Int32" Nullable="false" />
+    <Property Name="s_top" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="CategoryProduct">
+    <End Type="MP22NETModel.Category" Role="Category" Multiplicity="1" />
+    <End Type="MP22NETModel.Product" Role="Product" Multiplicity="*" />
+  </Association>
+  <Association Name="SectionProduct">
+    <End Type="MP22NETModel.Section" Role="Section" Multiplicity="1" />
+    <End Type="MP22NETModel.Product" Role="Product" Multiplicity="*" />
+  </Association>
+  <Association Name="EmployeeSection">
+    <End Type="MP22NETModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="MP22NETModel.Section" Role="Section" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Checkout">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Employee" Relationship="MP22NETModel.CheckoutEmployee" FromRole="Checkout" ToRole="Employee" />
+    <Property Name="Benefit" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Carts" Type="Int32" Nullable="false" />
+    <Property Name="c_left" Type="Int32" Nullable="false" />
+    <Property Name="c_top" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="CheckoutEmployee">
+    <End Type="MP22NETModel.Checkout" Role="Checkout" Multiplicity="*" />
+    <End Type="MP22NETModel.Employee" Role="Employee" Multiplicity="1" />
+  </Association>
 </Schema>

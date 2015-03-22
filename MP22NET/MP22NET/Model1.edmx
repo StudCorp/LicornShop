@@ -54,7 +54,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Firstname" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Lastname" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Icon" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Icon" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="Sections">
     <Key>
@@ -63,6 +63,8 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Benefit" Type="float" Nullable="false" />
+    <Property Name="s_left" Type="int" Nullable="false" />
+    <Property Name="s_top" Type="int" Nullable="false" />
     <Property Name="Employee_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Checkouts">
@@ -73,6 +75,8 @@
     <Property Name="Benefit" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Carts" Type="int" Nullable="false" />
+    <Property Name="c_left" Type="int" Nullable="false" />
+    <Property Name="c_top" Type="int" Nullable="false" />
     <Property Name="Employee_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="CategoryProduct">
@@ -179,7 +183,7 @@
           <NavigationProperty Name="Checkouts" Relationship="MP22NETModel.CheckoutEmployee" FromRole="Employee" ToRole="Checkout" />
           <Property Name="Firstname" Type="String" Nullable="false" />
           <Property Name="Lastname" Type="String" Nullable="false" />
-          <Property Name="Icon" Type="String" Nullable="false" />
+          <Property Name="Icon" Type="String" Nullable="true" />
         </EntityType>
         <EntityType Name="Section">
           <Key>
@@ -190,6 +194,8 @@
           <NavigationProperty Name="Employee" Relationship="MP22NETModel.EmployeeSection" FromRole="Section" ToRole="Employee" />
           <Property Name="Name" Type="String" Nullable="false" />
           <Property Name="Benefit" Type="Double" Nullable="false" />
+          <Property Name="s_left" Type="Int32" Nullable="false" />
+          <Property Name="s_top" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="CategoryProduct">
           <End Type="MP22NETModel.Category" Role="Category" Multiplicity="1" />
@@ -212,6 +218,8 @@
           <Property Name="Benefit" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" />
           <Property Name="Carts" Type="Int32" Nullable="false" />
+          <Property Name="c_left" Type="Int32" Nullable="false" />
+          <Property Name="c_top" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="CheckoutEmployee">
           <End Type="MP22NETModel.Checkout" Role="Checkout" Multiplicity="*" />
@@ -258,6 +266,8 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Benefit" ColumnName="Benefit" />
+          <ScalarProperty Name="s_left" ColumnName="s_left" />
+          <ScalarProperty Name="s_top" ColumnName="s_top" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -268,6 +278,8 @@
           <ScalarProperty Name="Benefit" ColumnName="Benefit" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Carts" ColumnName="Carts" />
+          <ScalarProperty Name="c_left" ColumnName="c_left" />
+          <ScalarProperty Name="c_top" ColumnName="c_top" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

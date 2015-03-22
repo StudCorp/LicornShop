@@ -18,6 +18,8 @@ namespace MP22NET
         public int Benefit { get; set; }
         public string Name { get; set; }
         public int Carts { get; set; }
+        public int c_left { get; set; }
+        public int c_top { get; set; }
     
         public virtual Employee Employee { get; set; }
     }
