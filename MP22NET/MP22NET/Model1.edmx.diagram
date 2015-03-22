@@ -5,8 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="4ec3500c29a143de90be3f8fb892c604" Name="Diagram1" >
-        <EntityTypeShape EntityType="MP22NETModel.Product" Width="1.5" PointX="4.625" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MP22NETModel.Category" Width="1.5" PointX="7.125" PointY="1.375" />
+        <EntityTypeShape EntityType="MP22NETModel.Product" Width="1.5" PointX="2.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MP22NETModel.Category" Width="1.5" PointX="3" PointY="3.375" />
+        <EntityTypeShape EntityType="MP22NETModel.Employee" Width="1.5" PointX="7.75" PointY="0.5" />
+        <EntityTypeShape EntityType="MP22NETModel.Section" Width="1.5" PointX="5.375" PointY="0.5" />
+        <AssociationConnector Association="MP22NETModel.CategoryProduct" />
+        <AssociationConnector Association="MP22NETModel.SectionProduct" />
+        <AssociationConnector Association="MP22NETModel.EmployeeSection" />
+        <EntityTypeShape EntityType="MP22NETModel.Checkout" Width="1.5" PointX="7.75" PointY="3.125" />
+        <AssociationConnector Association="MP22NETModel.CheckoutEmployee" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -16,5 +16,9 @@
                 <mui:Link DisplayName="Cadis" />
             </mui:ModernTab.Links>
         </mui:ModernTab>
+        <Canvas HorizontalAlignment="Left" Height="164" Margin="12,57,0,0" VerticalAlignment="Top" Width="256"/>
+        <Canvas HorizontalAlignment="Left" Height="164" Margin="2,57,0,0" VerticalAlignment="Top" Width="256"/>
+        <Canvas HorizontalAlignment="Left" Height="226" Margin="10,20,0,0" VerticalAlignment="Top" Width="256"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.517,0.492" Margin="44,3,0,0"/>
     </Grid>
 </UserControl>

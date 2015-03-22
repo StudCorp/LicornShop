@@ -27,5 +27,8 @@ namespace MP22NET
     
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Section> Sections { get; set; }
+        public virtual DbSet<Checkout> Checkouts { get; set; }
     }
 }

@@ -12,20 +12,20 @@ namespace MP22NET
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class Employee
     {
-        public Product()
+        public Employee()
         {
-            this.Price = 0D;
+            this.Sections = new HashSet<Section>();
+            this.Checkouts = new HashSet<Checkout>();
         }
     
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Brand { get; set; }
-        public double Price { get; set; }
-        public int Quantity { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        public string Icon { get; set; }
     
-        public virtual Category Category { get; set; }
-        public virtual Section Section { get; set; }
+        public virtual ICollection<Section> Sections { get; set; }
+        public virtual ICollection<Checkout> Checkouts { get; set; }
     }
 }
