@@ -56,6 +56,12 @@
                 <TextBlock Margin="0 10 0 5" Text="Prix : " />
                 <TextBox Name="ProductPrice" Text="" />
 
+                <TextBlock Margin="0 10 0 5" Text="Section : " />
+                <ComboBox Name="ProductSection"  />
+
+                <TextBlock Margin="0 10 0 5" Text="Catégorie : " />
+                <ComboBox Name="ProductCategory"  />
+
                 <StackPanel Orientation="Horizontal">
                     <mui:ModernButton
                     HorizontalAlignment="Center"

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace MP22NET.Pages.Admin
 {
@@ -21,6 +22,7 @@ namespace MP22NET.Pages.Admin
     /// </summary>
     public partial class ProductsPage : UserControl
     {
+
         public Product selectedProduct;
         public ProductsPage()
         {
@@ -35,16 +37,38 @@ namespace MP22NET.Pages.Admin
 
         public void UpdateList()
         {
-            List<Product> list = new List<Product>();
+            
 
             using (var ctx = new MP22NETEntities1())
             {
-                list = ctx.Products.ToList();
+                List<Product> list = ctx.Products.Include(s=> s.Category).Include(s=> s.Section).ToList();
+
+                p_list.ItemsSource = list;
 
             }
 
-            p_list.ItemsSource = list;
+            
 
+        }
+
+        public void UpdateRelatedLists()
+        {
+            using (var ctx = new MP22NETEntities1())
+            {
+                List<String> c_list = ctx.Categories.Select(s => s.Name).ToList();
+                List<String> s_list = ctx.Sections.Select(s => s.Name).ToList();
+
+
+                ProductSection.ItemsSource = s_list;
+                ProductCategory.ItemsSource = c_list;
+
+                ProductCategory.SelectedValue = ctx.Categories.Where(s => s.Id == selectedProduct.Category.Id).Select(s => s.Name).First();
+                ProductSection.SelectedValue = ctx.Sections.Where(s => s.Id == selectedProduct.Section.Id).Select(s => s.Name).First();
+
+                
+            }
+
+            
         }
 
         private void AddProduct_click(object sender, RoutedEventArgs e)
@@ -78,9 +102,10 @@ namespace MP22NET.Pages.Admin
             ProductPrice.Text = selected.Price.ToString();
             ProductQuantity.Text = selected.Quantity.ToString();
 
-
             splitter.Visibility = Visibility.Visible;
             modif.Visibility = Visibility.Visible;
+
+            UpdateRelatedLists();
         }
 
         private void UpdateProduct(object sender, RoutedEventArgs e)
@@ -95,6 +120,9 @@ namespace MP22NET.Pages.Admin
                     to_update.Brand = ProductBrand.Text;
                     to_update.Quantity = int.Parse(ProductQuantity.Text);
                     to_update.Price = int.Parse(ProductPrice.Text);
+
+                    to_update.Category = ctx.Categories.Where(s => s.Name == ProductCategory.SelectedValue.ToString()).First();
+                    to_update.Section = ctx.Sections.Where(s => s.Name == ProductSection.SelectedValue.ToString()).First();
 
 
                     ctx.Entry(to_update).State = System.Data.Entity.EntityState.Modified;
@@ -113,6 +141,12 @@ namespace MP22NET.Pages.Admin
             ProductBrand.Text = selectedProduct.Brand;
             ProductPrice.Text = selectedProduct.Price.ToString();
             ProductQuantity.Text = selectedProduct.Quantity.ToString();
+            using (var ctx = new MP22NETEntities1())
+            {
+                ProductCategory.SelectedValue = ctx.Categories.Where(s => s.Id == selectedProduct.Category.Id).Select(s => s.Name).First();
+                ProductSection.SelectedValue = ctx.Sections.Where(s => s.Id == selectedProduct.Section.Id).Select(s => s.Name).First();
+            }
+            
         }
 
         private void DeleteProduct(object sender, RoutedEventArgs e)

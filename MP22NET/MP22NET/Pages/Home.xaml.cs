@@ -12,15 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using FirstFloor.ModernUI.Windows;
 namespace MP22NET.Pages
 {
     /// <summary>
     /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class Home : UserControl
+    public partial class Home : UserControl, IContent
     {
-        Button button = null;
+        private Button button = null;
+        private int test;
+
         public Home()
         {
             InitializeComponent();
@@ -48,13 +50,11 @@ namespace MP22NET.Pages
                 }
             }
         }
-
-        public void UpdateMap(object sender, RoutedEventArgs e)
+        public void OnNavigatedTo(FirstFloor.ModernUI.Windows.Navigation.NavigationEventArgs e)
         {
             canvas1.Children.Clear();
             using (var db = new MP22NETEntities1())
             {
-
                 //affichage des Sections
                 List<Section> sections = db.Sections.ToList();
                 foreach (Section x in sections)
@@ -64,7 +64,6 @@ namespace MP22NET.Pages
                     Canvas.SetTop(button, x.s_top);
                     canvas1.Children.Add(button);
                 }
-
                 //Affichage des Checkouts
                 List<Checkout> checkouts = db.Checkouts.ToList();
                 foreach (Checkout x in checkouts)
@@ -76,6 +75,14 @@ namespace MP22NET.Pages
                 }
             }
         }
-
+        public void OnFragmentNavigation(FirstFloor.ModernUI.Windows.Navigation.FragmentNavigationEventArgs e)
+        {
+        }
+        public void OnNavigatedFrom(FirstFloor.ModernUI.Windows.Navigation.NavigationEventArgs e)
+        {
+        }
+        public void OnNavigatingFrom(FirstFloor.ModernUI.Windows.Navigation.NavigatingCancelEventArgs e)
+        {
+        }
     }
 }
