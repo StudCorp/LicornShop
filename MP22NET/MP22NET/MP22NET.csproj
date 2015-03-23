@@ -150,6 +150,12 @@
     <Compile Include="Pages\Admin\EditMapPage.xaml.cs">
       <DependentUpon>EditMapPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Map\PopupCheckout.xaml.cs">
+      <DependentUpon>PopupCheckout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Map\ModifSection.xaml.cs">
+      <DependentUpon>ModifSection.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -214,6 +220,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Admin\StatsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Map\PopupCheckout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Map\ModifSection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

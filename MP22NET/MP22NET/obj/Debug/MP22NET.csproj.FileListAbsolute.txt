@@ -55,3 +55,7 @@ C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Adm
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\Products\DeleteProduct.baml
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\Products\AddProduct.g.cs
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Admin\Products\DeleteProduct.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Map\PopupCheckout.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Map\ModifSection.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Map\PopupCheckout.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Map\ModifSection.g.cs

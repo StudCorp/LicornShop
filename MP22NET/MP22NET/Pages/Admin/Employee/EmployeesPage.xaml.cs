@@ -81,8 +81,8 @@ namespace MP22NET.Pages.Admin
 
             Firstname.Text = selected.Firstname;
             Lastname.Text = selected.Lastname;
-
-            Image.Source = new BitmapImage(new Uri(@selected.Icon));
+            if (selected.Icon != null)
+                Image.Source = new BitmapImage(new Uri(@selected.Icon));
             AvatarButton.Content = "Changer l'avatar...";
 
             splitter.Visibility = Visibility.Visible;
