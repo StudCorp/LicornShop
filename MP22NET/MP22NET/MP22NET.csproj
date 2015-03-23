@@ -58,8 +58,10 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -108,24 +110,41 @@
     <Compile Include="Pages\Administration.xaml.cs">
       <DependentUpon>Administration.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Admin\EmployeesViewModel.cs" />
-    <Compile Include="Pages\Admin\EditMapPage.xaml.cs">
-      <DependentUpon>EditMapPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Admin\AddEmployee.xaml.cs">
+    <Compile Include="Pages\Admin\Employee\AddEmployee.xaml.cs">
       <DependentUpon>AddEmployee.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Admin\ProductsPage.xaml.cs">
+    <Compile Include="Pages\Admin\Employee\DeleteEmployee.xaml.cs">
+      <DependentUpon>DeleteEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Category\AddCategory.xaml.cs">
+      <DependentUpon>AddCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Category\AddProductToCategory.xaml.cs">
+      <DependentUpon>AddProductToCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Category\DeleteCategory.xaml.cs">
+      <DependentUpon>DeleteCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Products\AddProduct.xaml.cs">
+      <DependentUpon>AddProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Products\DeleteProduct.xaml.cs">
+      <DependentUpon>DeleteProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Products\ProductsPage.xaml.cs">
       <DependentUpon>ProductsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Admin\CategoriesPage.xaml.cs">
+    <Compile Include="Pages\Admin\Category\CategoriesPage.xaml.cs">
       <DependentUpon>CategoriesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Admin\EmployeesPage.xaml.cs">
+    <Compile Include="Pages\Admin\Employee\EmployeesPage.xaml.cs">
       <DependentUpon>EmployeesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Admin\StatsPage.xaml.cs">
       <DependentUpon>StatsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\EditMapPage.xaml.cs">
+      <DependentUpon>EditMapPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -150,23 +169,43 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Admin\EditMapPage.xaml">
+    <Page Include="Pages\Admin\Employee\AddEmployee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Admin\AddEmployee.xaml">
+    <Page Include="Pages\Admin\Employee\DeleteEmployee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Admin\ProductsPage.xaml">
+    <Page Include="Pages\Admin\Category\AddCategory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Admin\CategoriesPage.xaml">
+    <Page Include="Pages\Admin\Category\AddProductToCategory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Admin\EmployeesPage.xaml">
+    <Page Include="Pages\Admin\Category\DeleteCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Products\AddProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Products\DeleteProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Products\ProductsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Category\CategoriesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Employee\EmployeesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -204,6 +243,10 @@
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="Pages\Admin\EditMapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

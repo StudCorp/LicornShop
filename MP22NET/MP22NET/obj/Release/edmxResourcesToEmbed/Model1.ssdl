@@ -58,6 +58,8 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Benefit" Type="float" Nullable="false" />
+    <Property Name="s_left" Type="int" Nullable="false" />
+    <Property Name="s_top" Type="int" Nullable="false" />
     <Property Name="Employee_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Checkouts">
@@ -68,6 +70,8 @@
     <Property Name="Benefit" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Carts" Type="int" Nullable="false" />
+    <Property Name="c_left" Type="int" Nullable="false" />
+    <Property Name="c_top" Type="int" Nullable="false" />
     <Property Name="Employee_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="CategoryProduct">

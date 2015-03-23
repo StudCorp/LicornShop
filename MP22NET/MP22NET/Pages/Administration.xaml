@@ -8,11 +8,11 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Style="{StaticResource ContentRoot}">
         <!-- TODO: set @SelectedSource -->
-        <mui:ModernTab Layout="List" SelectedSource="/Pages/Admin/ProductsPage.xaml">
+        <mui:ModernTab Layout="List" SelectedSource="/Pages/Admin/Products/ProductsPage.xaml">
             <mui:ModernTab.Links>
-                <mui:Link DisplayName="Produits" Source="/Pages/Admin/ProductsPage.xaml"/>
-                <mui:Link DisplayName="Categories" Source="/Pages/Admin/CategoriesPage.xaml" />
-                <mui:Link DisplayName="Employés" Source="/Pages/Admin/EmployeesPage.xaml" />
+                <mui:Link DisplayName="Produits" Source="/Pages/Admin/Products/ProductsPage.xaml"/>
+                <mui:Link DisplayName="Categories" Source="/Pages/Admin/Category/CategoriesPage.xaml" />
+                <mui:Link DisplayName="Employés" Source="/Pages/Admin/Employee/EmployeesPage.xaml" />
                 <mui:Link DisplayName="Carte du Magasin" Source="/Pages/Admin/EditMapPage.xaml"/>
                 <mui:Link DisplayName="Statistiques" Source="/Pages/Admin/StatsPage.xaml"/>
             </mui:ModernTab.Links>

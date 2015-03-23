@@ -42,3 +42,7 @@ C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\A
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\EmployeesPage.g.cs
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\AddEmployee.baml
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\AddEmployee.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\DeleteEmployee.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\DeleteEmployee.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\AddCategory.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\AddCategory.g.cs
