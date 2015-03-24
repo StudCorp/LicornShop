@@ -59,3 +59,4 @@ C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Map
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Map\ModifSection.baml
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Map\PopupCheckout.g.cs
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Debug\Pages\Map\ModifSection.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Debug\De.TorstenMandelkow.MetroChart.dll

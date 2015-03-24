@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("licorne.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model1.edmx.sql")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mp22net.mdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mp22net_log.ldf")]

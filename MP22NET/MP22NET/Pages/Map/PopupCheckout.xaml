@@ -5,9 +5,97 @@
                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
                   xmlns:mui="http://firstfloorsoftware.com/ModernUI"
                   mc:Ignorable="d" 
-                  d:DesignHeight="300" d:DesignWidth="300"
-                  Title="Créer Panier / Modifier Caissier">
+                  d:DesignHeight="500" d:DesignWidth="700"
+                  MinHeight="500" MinWidth="700"
+                  Title="Caisse">
 
-    <TextBlock Text="Replace the content of the dialog with your own." />
-    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Margin="5 15 0 0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <TextBlock HorizontalAlignment="Center" Text="Liste des produits : "/>
+                <ScrollViewer>
+                    <ListBox MaxHeight="600" Margin="0 15" HorizontalAlignment="Center" Name="p_list" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate >
+                                <TextBlock Text="{Binding Name}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </ScrollViewer>
+            </StackPanel>
+
+
+            <GridSplitter Grid.Column="1"/>
+            <GridSplitter Grid.Column="3"/>
+
+            <StackPanel Name="BuyPanel" Visibility="Visible" Grid.Column="2">
+                <TextBlock HorizontalAlignment="Center" Text="Acheter le produit"/>
+
+                <StackPanel Margin="0 20" Orientation="Horizontal">
+                    <TextBlock Margin="10 10 0 5" Text="Quantité :"/>
+                    <TextBox x:Name="txtNum" x:FieldModifier="private" Margin="10,5,0,5" Width="40" Text="0" TextChanged="txtNum_TextChanged" />
+                    <mui:ModernButton x:Name="cmdUp" x:FieldModifier="private" Margin="5,5,0,5" Content="˄" Width="25" Click="cmdUp_Click" IconData="F1 M 35,19L 41,19L 41,35L 57,35L 57,41L 41,41L 41,57L 35,57L 35,41L 19,41L 19,35L 35,35L 35,19 Z " />
+                    <mui:ModernButton x:Name="cmdDown" x:FieldModifier="private" Margin="5,5,0,5"  Width="25" Click="cmdDown_Click" IconData="F1 M 19,38L 57,38L 57,44L 19,44L 19,38 Z "/>
+                    <TextBlock Margin="30 10 0 5" Text="Coût :"/>
+                    <TextBlock Name="BuyCost" Margin="5 10 0 5" Text="0"/>
+                    <TextBlock Margin="0 10 0 5" Text=" €"/>
+                </StackPanel>
+
+                <mui:ModernButton 
+                    Click="AddToCart"
+                    HorizontalAlignment="Center"
+                    Margin="0 10 0 20"
+                    Content="Ajouter au panier"
+                    IconData="F1 M 23.7501,33.25L 34.8334,44.3333L 52.2499,22.1668L 56.9999,26.9168L 34.8334,53.8333L 19.0001,38L 23.7501,33.25 Z " 
+                    />
+                <Separator />
+                <TextBlock HorizontalAlignment="Center" Text="Liste d'achats"/>
+
+                <StackPanel>
+                    <ScrollViewer >
+                        <ListBox MaxHeight="200" Margin="0 20 0 0" HorizontalAlignment="Center" Name="cart_list" >
+                            <ListBox.ItemTemplate>
+                                <DataTemplate >
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Name}"/>
+                                        <TextBlock Text=" x"/>
+                                        <TextBlock Text="{Binding Quantity}"/>
+                                        <TextBlock Text=" => "/>
+                                        <TextBlock Text="{Binding Cost}"/>
+                                        <TextBlock Text=" €"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </ScrollViewer>
+                    <StackPanel Margin="0 10 0 0" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="Total : "/>
+                        <TextBlock Name="TotalCost" Text="0"/>
+                        <TextBlock Text=" €"/>
+                    </StackPanel>
+
+
+                </StackPanel>
+
+            </StackPanel>
+        </Grid>
+
+        <StackPanel Grid.Column="1">
+            <TextBlock Margin="5 10 0 10" Text="Caissier : " />
+            <ComboBox Margin="5 0 5 0" Name="e_list" />
+        </StackPanel>
+
+    </Grid>
+
 </mui:ModernDialog>

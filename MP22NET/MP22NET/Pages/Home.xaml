@@ -4,12 +4,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             xmlns:chart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart" >
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <Canvas Name="canvas1" HorizontalAlignment="Left" Height="1000" VerticalAlignment="Top" Width="1000" Background="blue"/>
+            <Canvas Name="canvas1" HorizontalAlignment="Left" Height="1000" VerticalAlignment="Top" Width="1500">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\floor.png" AlignmentY="Top" AlignmentX="Left" TileMode="FlipXY" 
+            Viewport="0,0,50,50" ViewportUnits="Absolute"/>
+                </Canvas.Background>
+            </Canvas>
         </ScrollViewer>
+        
     </Grid>
-</UserControl>
 
+    
+
+</UserControl>
 
