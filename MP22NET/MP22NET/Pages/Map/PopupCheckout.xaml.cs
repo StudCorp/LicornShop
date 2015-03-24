@@ -90,7 +90,12 @@ namespace MP22NET.Pages.Map
                 // Mise a jour des bénéfices
                 Checkout c_to_update = ctx.Checkouts.Where(s => s.Id == checkout.Id).First();
                 c_to_update.Benefit += totalCost;
+
+                c_to_update.Carts++;
+
                 ctx.Entry(c_to_update).State = System.Data.Entity.EntityState.Modified;
+
+                
 
                 ctx.SaveChanges();
             }

@@ -30,10 +30,8 @@ C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Release\MP22NET
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Release\MP22NET.pdb
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Administration.baml
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\EditMapPage.baml
-C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\StatsPage.baml
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Administration.g.cs
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\EditMapPage.g.cs
-C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\StatsPage.g.cs
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\bin\Release\De.TorstenMandelkow.MetroChart.dll
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\Employee\AddEmployee.baml
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\Employee\DeleteEmployee.baml
@@ -59,3 +57,12 @@ C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\A
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\Employee\EmployeesPage.g.cs
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Map\PopupCheckout.g.cs
 C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Map\ModifSection.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\MP22NET.csprojResolveAssemblyReference.cache
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\Stats\CartsByCheckout.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\Stats\MoneyCheckout.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\Stats\MoneySection.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\Stats\StatsPage.baml
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\Stats\CartsByCheckout.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\Stats\MoneyCheckout.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\Stats\MoneySection.g.cs
+C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\obj\Release\Pages\Admin\Stats\StatsPage.g.cs

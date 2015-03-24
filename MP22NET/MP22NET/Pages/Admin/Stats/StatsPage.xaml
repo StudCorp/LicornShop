@@ -5,15 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="350">
     <Grid Style="{StaticResource ContentRoot}">
         <!-- TODO: set @SelectedSource -->
-        <mui:ModernTab Layout="Tab">
+        <mui:ModernTab Layout="Tab" SelectedSource="/Pages/Admin/Stats/MoneySection.xaml">
             <mui:ModernTab.Links>
                 <!-- TODO: set @Source -->
-                <mui:Link DisplayName="Sections" />
-                <mui:Link DisplayName="Caisses" />
-                <mui:Link DisplayName="Cadis" />
+                <mui:Link DisplayName="Sections" Source="/Pages/Admin/Stats/MoneySection.xaml" />
+                <mui:Link DisplayName="Caisses" Source="/Pages/Admin/Stats/MoneyCheckout.xaml"/>
+                <mui:Link DisplayName="Paniers" Source="/Pages/Admin/Stats/CartsByCheckout.xaml" />
             </mui:ModernTab.Links>
         </mui:ModernTab>
     </Grid>

@@ -8,7 +8,12 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Style="{StaticResource ContentRoot}">
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <Canvas Name="canvas1" Height="1000" Width="1000" Background="blue"/>
+            <Canvas Name="canvas1" Height="1000" Width="1000" AllowDrop="True" Drop="bouton_Drop">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="C:\Users\Zorglub\Documents\GitHub\LicornShop\MP22NET\MP22NET\floor.png" AlignmentY="Top" AlignmentX="Left" TileMode="FlipXY" 
+            Viewport="0,0,50,50" ViewportUnits="Absolute"/>
+                </Canvas.Background>
+            </Canvas>
         </ScrollViewer>
     </Grid>
 </UserControl>

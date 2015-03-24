@@ -150,7 +150,17 @@
     <Compile Include="Pages\Admin\Employee\EmployeesPage.xaml.cs">
       <DependentUpon>EmployeesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Admin\StatsPage.xaml.cs">
+    <Compile Include="Pages\Admin\Stats\CartsByCheckout.xaml.cs">
+      <DependentUpon>CartsByCheckout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Stats\MoneyCheckout.xaml.cs">
+      <DependentUpon>MoneyCheckout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Stats\MoneySection.xaml.cs">
+      <DependentUpon>MoneySection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\Stats\MoneySectionModel.cs" />
+    <Compile Include="Pages\Admin\Stats\StatsPage.xaml.cs">
       <DependentUpon>StatsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Admin\EditMapPage.xaml.cs">
@@ -225,7 +235,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Admin\StatsPage.xaml">
+    <Page Include="Pages\Admin\Stats\CartsByCheckout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Stats\MoneyCheckout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Stats\MoneySection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\Stats\StatsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

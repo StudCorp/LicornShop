@@ -14,7 +14,7 @@
                 <mui:Link DisplayName="Categories" Source="/Pages/Admin/Category/CategoriesPage.xaml" />
                 <mui:Link DisplayName="Employés" Source="/Pages/Admin/Employee/EmployeesPage.xaml" />
                 <mui:Link DisplayName="Carte du Magasin" Source="/Pages/Admin/EditMapPage.xaml"/>
-                <mui:Link DisplayName="Statistiques" Source="/Pages/Admin/StatsPage.xaml"/>
+                <mui:Link DisplayName="Statistiques" Source="/Pages/Admin/Stats/StatsPage.xaml"/>
             </mui:ModernTab.Links>
         </mui:ModernTab>
     </Grid>
